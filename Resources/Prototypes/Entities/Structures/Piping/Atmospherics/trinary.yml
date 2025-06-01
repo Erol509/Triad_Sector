@@ -336,4 +336,3 @@
         Primary: PressureControlledValve
         Secondary: PressureControlledValveAlt1
         Tertiary: PressureControlledValveAlt2
-    - type: DeviceRestrictOverlap # Funky
