@@ -5,6 +5,17 @@
   description: A rooty tooty point and shooty.
   abstract: true
   components:
+  - type: RestrictByUserTag
+    doestContain:
+    - Abductor
+    messages:
+    - abductor-gun-restricted-1
+  - type: KnockbackByUserTag
+    doestContain:
+      Resomi:
+        knockback: 0.1
+      Avali:
+        knockback: 0.05 # Bigger bird, more sturdy bones.. or something.
   - type: Sprite
   - type: Item
     size: Huge
