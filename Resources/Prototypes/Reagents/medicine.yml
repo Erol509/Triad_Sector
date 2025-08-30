@@ -777,6 +777,31 @@
           factor: 6
         - !type:ModifyBloodLevel
           amount: 6
+    Medicine: #Starlight
+      metabolismRate: 0.5
+      effects:
+        - !type:ModifyBloodLevel
+          conditions:
+          - !type:OrganType
+           type: Avali
+           shouldHave: false
+          amount: 6
+        - !type:ModifyBleedAmount
+          conditions:
+          - !type:OrganType
+           type: Avali
+           shouldHave: true
+          amount: 2
+        - !type:HealthChange
+          conditions:
+          - !type:OrganType
+           type: Avali
+           shouldHave: true
+          damage:
+            types:
+              Poison: 12 #This is on par with giving someone the wrong blood-type (very lethal) / (Lethal Dose: 10u, VERY FAST ACTING)
+              Caustic: 2 #Split to prevent 15u RRing someone, as caustic can be healed with topicals.
+              Slash: 1 #Allows it to heal bleeding.
 
 - type: reagent
   id: Siderlac
@@ -931,7 +956,7 @@
           Burn: -1.5
           Toxin: -1.5
           Airloss: -1.5
-          Brute: -1.5   
+          Brute: -1.5
       - !type:HealthChange # Mono - Added overdose
         conditions:
         - !type:ReagentThreshold
@@ -1439,7 +1464,7 @@
           component: ForcedSleeping
           refresh: false
           type: Add
-        
+
 
 - type: reagent
   id : Aloxadone
