@@ -19,7 +19,7 @@
       - left leg
       - head # Shitmed Change
       organs:
-        heart: OrganHumanHeart
+        heart: OrganResomiHeart # Starlight
         lungs: OrganHumanLungs
         stomach: OrganResomiStomach # Goobstation - classic furries can eat everything except chocolate :)
         liver: OrganHumanLiver

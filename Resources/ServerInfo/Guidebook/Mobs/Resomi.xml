@@ -5,6 +5,11 @@
     <GuideEntityEmbed Entity="MobResomiDummy" Caption=""/>
   </Box>
 
+  [color=#ffa500]Warning! This species is not recommended for new players due to major gameplay changes![/color]
+
+  small, upright, raptor-like creatures with four ears.
+  Their thin tail is still strong enough to pull things without needing their hands for assistance.
+
   Resomi are a small avian-like species that hail from an icy world.
 
   While their wings do not grant them complete flight, they are able to use them to maneuver better while in zero-gravity.
@@ -19,5 +24,37 @@
   Due to their small size, they can fit in duffelbags.
 
   Their unarmed attack deals Slash damage.
+  ## Nightvision
+  Resomi have a innate nightvision given to them by their eyes.
+  This allows them to see in pure darkness farther than any normal handheld lightsource would provide.
+  They will have normal vision when wearing any equipment that provides flash immunity.
+  Using HUD variants allows you to keep your innate vision, at the cost of losing flash immunity.
+  You can configure if you start with glasses or HUD in the loadouts for all relevant roles.
+  <Box>
+    <GuideEntityEmbed Entity="ClothingEyesGlassesSecurity" Scale="5" Caption="Security Glasses\nNo Nightvision\nHas flash immunity"/>
+    <GuideEntityEmbed Entity="ClothingEyesHudSecurity" Scale="5" Caption="Security Hud\nNightvision\nNo flash immunity"/>
+  </Box>
+  ## Flash Duration
+  Due to their eyes being more sensitive to light, Resomi will be stunned for a longer duration when flashed.
+  Flashes will take [color=yellow]2[/color] times as long as normal for other species, lasting up to [color=#ffa500]10[/color] seconds in the case of a localized flash.
+
+  ## Health
+  Resomi have lower health due to their small stature, falling into a critical state at [color=#ffa500]85[/color] points of damage and dying at [color=#ffa500]170[/color] points of damage.
+  Resomi also prefer colder temperatures compared to humans, being roughly akin to Moths.
+  Resomi heal airloss from [color=cyan]Ammonia[/color] and [color=cyan]Amoxla[/color],
+  but [color=red]Saline[/color], [color=red]Dex[/color], and [color=red]Dex+[/color] are lethal to them. Remember to remind doctors about this!
+
+  ## Claw attack
+  Resomi are able to slash at others with their claws.
+  These attacks deal [color=red]5[/color] points of Slash damage with a hit rate that is the same as humans fists attack.
+
+  ## Weapon Knockback
+  Resomi are very lightweight, and as such take so much knockback from large caliber weapons that they get pushed around.
+  Resomi also will receive [color=yellow]Stun Damage[/color] from large caliber weapons for each shot.
+  In general, the weapons that will give you knockback are [color=yellow]Rifles, Sniper Rifles, Shotguns, LMGs, HMGs, and Grenade Launchers.[/color]
+  Look out especially on Rocket launchers, as since they are recoil-less, you will actually get [color=red]pulled forward with the rocket[/color] for a short distance.
+  The safest weapons to use that will give you no knockback are [color=green]Pistols and SMGs[/color].
+  No slips can help mitigate some of the knockback from firing weapons, but not all of it!
+  Also keep in mind that any stamina resistance you have DOES work to reduce the stamina damage from these weapons.
 
 </Document>
