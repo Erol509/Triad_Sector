@@ -1,7 +1,7 @@
 {
   "version": 1,
   "license": "CC-BY-SA-3.0",
-  "copyright": "Sprited by belay5 (Discord) | equipped-MASK-vox sprited by PuroSlavKing (Github) | hydrakin sprite by Zethine / @synthetic_086 (discord).",
+  "copyright": "Sprited by belay5 (Discord) | equipped-MASK-vox sprited by PuroSlavKing (Github). equipped-EYES-resomi modified from equipped-EYES by Huaqas (GitHub).",
   "size": {
     "x": 32,
     "y": 32
@@ -24,8 +24,12 @@
     },
     {
       "name": "equipped-MASK-hydrakin",
+    },
+    {
+      "name": "equipped-MASK-resomi",
       "directions": 4
     },
+
     {
       "name": "inhand-left",
       "directions": 4

@@ -145,6 +145,8 @@
   components:
     - type: HumanoidAppearance
       species: Avali
+      undergarmentTop: UndergarmentTopTanktopAvali
+      undergarmentBottom: UndergarmentBottomBoxersAvali
     - type: Inventory
       speciesId: Avali
       displacements:
