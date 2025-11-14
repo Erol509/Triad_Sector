@@ -1,7 +1,7 @@
 {
     "version": 1,
     "license": "CC-BY-SA-3.0",
-    "copyright": "made by imasleeping on Discord",
+    "copyright": "made by imasleeping on Discord Avali state by DocMoth (Github).",
     "size": {
         "x": 32,
         "y": 32
@@ -30,6 +30,14 @@
         },
         {
             "name": "wielded-inhand-right",
+            "directions": 4
+        },
+        {
+            "name": "off-equipped-HELMET-avali",
+            "directions": 4
+        },
+        {
+            "name": "on-equipped-HELMET-avali",
             "directions": 4
         }
     ]
