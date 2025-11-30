@@ -3,11 +3,10 @@ using Content.Shared.Actions;
 using Content.Shared.Damage;
 using Robust.Shared.Timing;
 using Content.Shared.Mobs;
-using Content.Shared.Mobs.Components;
 using Content.Shared._Starlight.Actions.EntitySystems;
 using Content.Shared._Starlight.Actions.Components;
 using Content.Shared._Starlight.Actions.Events;
-using Content.Shared.Body.Components;
+using Content.Shared.Mobs.Systems;
 using Robust.Shared.Player;
 
 namespace Content.Server._Starlight.Actions.EntitySystems;
@@ -145,125 +144,4 @@ public sealed class StasisSystem : SharedStasisSystem
             StasisAnimationType.Exit);
         RaiseNetworkEvent(ev, Filter.Pvs(uid, entityManager: EntityManager));
     }
-
-    public override void Update(float frameTime)
-    {
-        base.Update(frameTime);
-
-        var query = EntityQueryEnumerator<StasisComponent>();
-        while (query.MoveNext(out var uid, out var comp))
-        {
-            if (TryComp<MobStateComponent>(uid, out var mobState))
-            {
-                var currentState = mobState.CurrentState;
-                var healingValues = GetHealingValues(currentState, comp);
-                OnStasisUpdate(uid, comp, new FrameEventArgs(frameTime), healingValues);
-            }
-        }
-    }
-
-    private void OnDamageChanged(EntityUid uid, StasisComponent component, DamageChangedEvent args)
-    {
-        // If the entity has a mob state component, and the damage changed event is not healing, apply the resistance.
-        if (TryComp<MobStateComponent>(uid, out var mobState))
-        {
-            var currentState = mobState.CurrentState;
-            var healingValues = GetHealingValues(currentState, component);
-            ApplyResistance(uid, args, component, healingValues);
-        }
-    }
-
-    private void ApplyResistance(EntityUid uid, DamageChangedEvent args, StasisComponent comp,
-        StasisHealingValues healingValues)
-    {
-        // Skip if this is healing or if the damage change is from our own healing
-        if (!args.DamageIncreased || args.DamageDelta == null || args.Origin == uid)
-            return;
-
-        // Only apply resistance if in stasis
-        if (!comp.IsInStasis)
-            return;
-
-        // Skip if this damage was already modified by stasis
-        if (args.Origin == uid && args.DamageDelta.DamageDict.All(x => x.Value < 0))
-            return;
-
-        // Create new DamageSpecifier with reduced damage
-        var damageToApply = new DamageSpecifier();
-        foreach (var (type, amount) in args.DamageDelta.DamageDict)
-        {
-            damageToApply.DamageDict.Add(type, amount - (amount * healingValues.AdditionalDamageResistance));
-        }
-
-        // Apply the reduced damage
-        _damageableSystem.TryChangeDamage(uid, damageToApply, true, origin: uid);
-    }
-
-    private void OnStasisUpdate(EntityUid uid, StasisComponent comp, FrameEventArgs args,
-        StasisHealingValues healingValues)
-    {
-        if (!comp.IsInStasis)
-            return;
-
-        // Apply healing effect
-        var healAmount = new DamageSpecifier();
-        healAmount.DamageDict.Add("Blunt", FixedPoint2.New(healingValues.BluntHeal * args.DeltaSeconds * -1));
-        healAmount.DamageDict.Add("Slash", FixedPoint2.New(healingValues.SlashHeal * args.DeltaSeconds * -1));
-        healAmount.DamageDict.Add("Piercing",
-            FixedPoint2.New(healingValues.PiercingHeal * args.DeltaSeconds * -1));
-        healAmount.DamageDict.Add("Heat", FixedPoint2.New(healingValues.HeatHeal * args.DeltaSeconds * -1));
-        healAmount.DamageDict.Add("Cold", FixedPoint2.New(healingValues.ColdHeal * args.DeltaSeconds * -1));
-
-        if (TryComp<DamageableComponent>(uid, out _))
-        {
-            _damageableSystem.TryChangeDamage(uid, healAmount, true, origin: uid);
-        }
-
-        // Heal bleeding
-        if (TryComp<BloodstreamComponent>(uid, out var bloodstream) && bloodstream.BleedAmount > 0)
-        {
-            _bloodstreamSystem.TryModifyBleedAmount((uid, bloodstream), -healingValues.BleedHeal * (float)args.DeltaSeconds);
-        }
-    }
-
-    /// <summary>
-    /// Gets the healing values for the stasis effect based on the mob state.
-    /// </summary>
-    private StasisHealingValues GetHealingValues(MobState state, StasisComponent comp)
-    {
-        return state switch
-        {
-            MobState.Alive => new StasisHealingValues(comp.StasisBluntHealPerSecond, comp.StasisSlashingHealPerSecond,
-                comp.StasisPiercingHealPerSecond, comp.StasisHeatHealPerSecond, comp.StasisColdHealPerSecond,
-                comp.StasisBleedHealPerSecond, comp.StasisAdditionalDamageResistance),
-            MobState.Critical => new StasisHealingValues(comp.StasisInCritBluntHealPerSecond,
-                comp.StasisInCritSlashingHealPerSecond, comp.StasisInCritPiercingHealPerSecond,
-                comp.StasisInCritHeatHealPerSecond, comp.StasisInCritColdHealPerSecond,
-                comp.StasisInCritBleedHealPerSecond, comp.StasisInCritAdditionalDamageResistance),
-            MobState.Invalid => new StasisHealingValues(0, 0, 0, 0, 0, 0, 0),
-            MobState.Dead => new StasisHealingValues(0, 0, 0, 0, 0, 0, 0),
-            _ => new StasisHealingValues(0, 0, 0, 0, 0, 0, 0),
-        };
-    }
-}
-
-/// <summary>
-/// A struct that contains the healing values for the stasis effect.
-/// </summary>
-sealed class StasisHealingValues(
-    float bluntHeal,
-    float slashHeal,
-    float piercingHeal,
-    float heatHeal,
-    float coldHeal,
-    float bleedHeal,
-    float additionalDamageResistance)
-{
-    public float BluntHeal { get; private set; } = bluntHeal;
-    public float SlashHeal { get; private set; } = slashHeal;
-    public float PiercingHeal { get; private set; } = piercingHeal;
-    public float HeatHeal { get; private set; } = heatHeal;
-    public float ColdHeal { get; private set; } = coldHeal;
-    public float AdditionalDamageResistance { get; private set; } = additionalDamageResistance;
-    public float BleedHeal { get; private set; } = bleedHeal;
 }

@@ -5,137 +5,165 @@
   id: BaseMobAvali
   abstract: true
   components:
-  - type: Absorbable
-  - type: HumanoidAppearance
-    species: Avali
-  - type: Hunger # on 2x more
-    thresholds:
-      Overfed: 250
-      Okay: 200
-      Peckish: 150
-      Starving: 100
-      Dead: 0
-    baseDecayRate: 0.03
-  - type: Thirst
-  - type: Icon
-    sprite: _Starlight/Mobs/Species/Avali/parts.rsi
-    state: full
-  - type: Body
-    prototype: Avali
-    requiredLegs: 2
-  - type: Inventory
-    speciesId: avali
-    displacements:
-      jumpsuit:
-        sizeMaps:
-          32:
-            sprite: _Starlight/Mobs/Species/Avali/displacement.rsi
-            state: jumpsuit
-      shoes: # DM only for colored shoes!
-        sizeMaps:
-          32:
-            sprite: _Starlight/Mobs/Species/Avali/displacement.rsi
-            state: shoes
-      head:
-        sizeMaps:
-          32:
-            sprite: _Starlight/Mobs/Species/Avali/displacement.rsi
-            state: head
-      hand:
-        sizeMaps:
-          32:
-            sprite: _Starlight/Mobs/Species/Avali/displacement.rsi
-            state: hand
-      back:
-        sizeMaps:
-          32:
-            sprite: _Starlight/Mobs/Species/Avali/displacement.rsi
-            state: back
-  - type: Butcherable
-    butcheringType: Spike
-    spawned:
-    - id: FoodMeatChicken
-      amount: 3
-  - type: Speech
-    speechVerb: Parrot # RMC did it right.
-    speechSounds: MaleAvali
-  - type: MobThresholds
-    thresholds:
-      0: Alive
-      90: Critical
-      180: Dead
-  - type: Sprite
-    scale: 0.9, 0.9
-  - type: TemperatureSpeed
-    thresholds:
-      250: 0.9
-      230: 0.8
-      223: 0.6
-  - type: Fixtures
-    fixtures:
-      fix1:
-        shape:
-          !type:PhysShapeCircle
-          radius: 0.35
-        density: 95 #tiny
-        restitution: 0.0
-        mask:
-        - MobMask
-        layer:
-        - MobLayer
-  - type: Vocal
-    sounds:
-      Male: MaleAvali
-      Female: FemaleAvali
-      Unsexed: MaleAvali
-  - type: MovementSpeedModifier
-    weightlessAcceleration: 1.6 # Avalis are specifically built to fly in low-g environments
-    weightlessFriction: 1
-    weightlessModifier: 1
-    speciesSprintSpeedModifier: 1.05 #slightly faster due to smaller size (I refuse to go any higher because of what happened with the run speed of felonids.)
-    speciesWalkSpeedModifier: 1.00
-  - type: Damageable
-    damageContainer: Biological
-    damageModifierSet: Avali
-  - type: DamageVisuals
-    damageOverlayGroups:
-      Brute:
-        sprite: Mobs/Effects/brute_damage.rsi
-        color: "#7a8bf2"
-  - type: Bloodstream
-    bloodReagent: AmmoniaBlood
-  - type: MeleeWeapon
-    soundHit:
-      path: /Audio/Weapons/pierce.ogg
-    angle: 30
-    animation: WeaponArcClaw
-    damage:
-      types:
-        Slash: 6.25
-  - type: Temperature
-    heatDamageThreshold: 310
-    coldDamageThreshold: 223
-    currentTemperature: 296.15
-    specificHeat: 48
-  - type: ThermalRegulator
-    metabolismHeat: 400 # icebirb go brrr
-    radiatedHeat: 100
-    implicitHeatRegulation: 500
-    sweatHeatRegulation: 2000
-    shiveringHeatRegulation: 2000
-    normalBodyTemperature: 296.15
-    thermalRegulationTemperatureThreshold: 10
-  - type: AvaliStasis
-    enterStasisAction: ActionAvaliStasisEnter
-    exitStasisAction: ActionAvaliStasisExit
-    stasisCooldown: 1
-    stasisDuration: 120
-    stasisBluntHeal: 10
-    stasisSlashingHeal: 10
-    stasisPiercingHeal: 10
-    stasisHeatHeal: 10
-    stasisColdHeal: 10
-    stasisDamageResistance: 0.5
+    - type: LanguageKnowledge
+      speaks:
+      - GalacticCommon
+      - Scratch
+      understands:
+      - GalacticCommon
+      - Scratch
+    - type: Tag
+      tags:
+        - CanPilot
+        - FootstepSound
+        - DoorBumpOpener
+        - AnomalyHost
+        - Avali
+    - type: Absorbable
+    - type: HumanoidAppearance
+      species: Avali
+      hideLayersOnEquip:
+      - Tail
+      - HeadTop
+    - type: Hunger # on 2x more
+      thresholds:
+        Overfed: 250
+        Okay: 200
+        Peckish: 150
+        Starving: 100
+        Dead: 0
+      baseDecayRate: 0.03
+    - type: Thirst
+    - type: Icon
+      sprite: _Starlight/Mobs/Species/Avali/parts.rsi
+      state: full
+    - type: Body
+      prototype: Avali
+      requiredLegs: 2
+    - type: Inventory
+      speciesId: avali
+      displacements:
+        jumpsuit:
+          sizeMaps:
+            32:
+              sprite: _Starlight/Mobs/Species/Avali/displacement.rsi
+              state: jumpsuit
+        outerClothing:
+          sizeMaps:
+            32:
+              sprite: _Starlight/Mobs/Species/Avali/displacement.rsi
+              state: outerclothing
+        shoes: # DM only for colored shoes!
+          sizeMaps:
+            32:
+              sprite: _Starlight/Mobs/Species/Avali/displacement.rsi
+              state: shoes
+        head:
+          sizeMaps:
+            32:
+              sprite: _Starlight/Mobs/Species/Avali/displacement.rsi
+              state: head
+        hand:
+          sizeMaps:
+            32:
+              sprite: _Starlight/Mobs/Species/Avali/displacement.rsi
+              state: hand
+        back:
+          sizeMaps:
+            32:
+              sprite: _Starlight/Mobs/Species/Avali/displacement.rsi
+              state: back
+        gloves:
+          sizeMaps:
+            32:
+              sprite: _Starlight/Mobs/Species/Avali/displacement.rsi
+              state: gloves
+    - type: Butcherable
+      butcheringType: Spike
+      spawned:
+        - id: FoodMeatChicken
+          amount: 3
+    - type: Speech
+      speechVerb: Parrot # RMC did it right.
+      speechSounds: MaleAvali
+      allowedEmotes: ['Chirp', 'Hisses', 'Purr', 'Growl', 'Trill', 'Scree', 'Call', 'Squawk']
+    - type: MobThresholds
+      thresholds:
+        0: Alive
+        90: Critical
+        180: Dead
+    - type: TemperatureSpeed
+      thresholds:
+        250: 0.9
+        230: 0.8
+        223: 0.6
+    - type: Fixtures
+      fixtures:
+        fix1:
+          shape:
+            !type:PhysShapeCircle
+            radius: 0.35
+          density: 95 #tiny
+          restitution: 0.0
+          mask:
+            - MobMask
+          layer:
+            - MobLayer
+    - type: Vocal
+      sounds:
+        Male: MaleAvali
+        Female: FemaleAvali
+        Unsexed: MaleAvali
+    - type: MovementSpeedModifier
+      weightlessAcceleration: 1.6 # Avalis are specifically built to fly in low-g environments
+      weightlessFriction: 1
+      weightlessModifier: 1
+    - type: Damageable
+      damageContainer: Biological
+      damageModifierSet: Avali
+    - type: DamageVisuals
+      damageOverlayGroups:
+        Brute:
+          sprite: Mobs/Effects/brute_damage.rsi
+          color: "#6C3BAA"
+    - type: Bloodstream
+      bloodReagent: AvaliBlood
+    - type: MeleeWeapon
+      soundHit:
+        path: /Audio/Weapons/pierce.ogg
+      angle: 30
+      animation: WeaponArcClaw
+      damage:
+        types:
+          Slash: 6.25
+    - type: Temperature
+      heatDamageThreshold: 310
+      coldDamageThreshold: 223
+      currentTemperature: 261
+      specificHeat: 48
+    - type: ThermalRegulator
+      metabolismHeat: 400 # icebirb go brrr
+      radiatedHeat: 100
+      implicitHeatRegulation: 1500
+      sweatHeatRegulation: 2000
+      shiveringHeatRegulation: 2000
+      normalBodyTemperature: 261
+      thermalRegulationTemperatureThreshold: 1
+    - type: Stasis
+      enterStasisAction: ActionStasisEnter
+      exitStasisAction: ActionStasisExit
+      updateInterval: 1s
+      healingPerUpdate:
+        types:
+          Heat: 2
+          Cold: 2
+        groups:
+          Brute: 6
+      bleedHealPerUpdate: 1.0
+      critHealingModifier: 2.0
+      stasisDamageReduction: 0.5
+
+# Chirp!
 
 - type: entity
   parent: BaseSpeciesDummy
