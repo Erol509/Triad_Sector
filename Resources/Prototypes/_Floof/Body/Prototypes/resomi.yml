@@ -8,8 +8,11 @@
       connections:
       - torso
       organs:
-        brain: OrganHumanBrain
-        eyes: OrganHumanEyes
+        brain: OrganResomiBrain
+        eyes: OrganResomiEyes
+        tongue: OrganHumanTongue
+        eye_implant: null
+        brain_implant: BrainImplantNexus # 🌟Starlight🌟
     torso:
       part: TorsoResomi
       connections:
@@ -20,10 +23,11 @@
       - head # Shitmed Change
       organs:
         heart: OrganResomiHeart # Starlight
-        lungs: OrganHumanLungs
-        stomach: OrganResomiStomach # Goobstation - classic furries can eat everything except chocolate :)
-        liver: OrganHumanLiver
-        kidneys: OrganHumanKidneys
+        lungs: OrganResomiLungs
+        stomach: OrganResomiStomach
+        liver: OrganResomiLiver
+        kidneys: OrganResomiKidneys
+        cavity: null
     right arm:
       part: RightArmResomi
       connections:
