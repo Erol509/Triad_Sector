@@ -1,7 +1,7 @@
 using Robust.Shared.Serialization;
 using Robust.Shared.Map;
 
-namespace Content.Shared._Starlight.Actions.Events;
+namespace Content.Shared._Starlight.Actions.Stasis;
 
 /// <summary>
 /// The type of stasis animation to play

@@ -1,10 +1,11 @@
-using Content.Shared._Starlight.Actions.EntitySystems; // Starlight-edit
-using Content.Shared.Actions;
 using Robust.Shared.GameStates;
 using Robust.Shared.Serialization;
 
 namespace Content.Shared.Actions;
-[RegisterComponent, NetworkedComponent, Access(typeof(SharedActionsSystem), typeof(StarlightActionsSystem))] // Starlight-edit
+
+[NetworkedComponent]
+[RegisterComponent]
+[Access(typeof(SharedActionsSystem))]
 public sealed partial class ActionsComponent : Component
 {
     /// <summary>

@@ -1,7 +1,6 @@
 using Robust.Shared.GameStates;
-using Content.Shared._Starlight.Actions.EntitySystems;
 
-namespace Content.Shared._Starlight.Actions.Components;
+namespace Content.Shared._Starlight.Actions.Stasis;
 
 /// <summary>
 /// Component that prevents an entity from performing most actions while in stasis.

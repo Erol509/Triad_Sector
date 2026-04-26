@@ -1,7 +1,6 @@
-using Content.Shared._Starlight.Actions.EntitySystems;
-using Content.Shared._Starlight.Actions.Components;
+using Content.Shared._Starlight.Actions.Stasis;
 
-namespace Content.Server._Starlight.Actions.EntitySystems;
+namespace Content.Server._Starlight.Actions.Stasis;
 
 public sealed class StasisFrozenSystem : SharedStasisFrozenSystem
 {
