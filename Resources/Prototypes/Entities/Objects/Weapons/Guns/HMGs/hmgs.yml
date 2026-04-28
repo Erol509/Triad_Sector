@@ -5,11 +5,6 @@
   description: Spray and pray.
   abstract: true
   components:
-  - type: RestrictByUserTag
-    doestContain:
-    - Abductor
-    messages:
-    - abductor-gun-restricted-1
   - type: KnockbackByUserTag
     doestContain:
       Resomi:
