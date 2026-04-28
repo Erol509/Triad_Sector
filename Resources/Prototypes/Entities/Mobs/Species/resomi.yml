@@ -1,6 +1,6 @@
 - type: entity
   name: Urist McRaptor
-  parent: [BaseMobSpeciesOrganic, BaseSpeciesPickupable]
+  parent: [BaseMobSpeciesOrganic]
   id: BaseMobResomi
   abstract: true
   components:
@@ -46,7 +46,7 @@
     undergarmentTop: UndergarmentTopTanktopResomi
     undergarmentBottom: UndergarmentBottomBoxersResomi
   - type: Fixtures
-    fixtures: 
+    fixtures:
       fix1:
         shape:
           !type:PhysShapeCircle
@@ -79,7 +79,7 @@
       170: Dead
   - type: SlowOnDamage
     speedModifierThresholds:
-      51: 0.7  #Basicly 60% and 80% 
+      51: 0.7  #Basicly 60% and 80%
       68: 0.5
   - type: MeleeWeapon
     soundHit:
@@ -251,7 +251,7 @@
   - type: NightVision
   - type: FlashModifier
     modifier: 2
-    
+
 - type: entity
   parent: BaseSpeciesDummy
   id: MobResomiDummy

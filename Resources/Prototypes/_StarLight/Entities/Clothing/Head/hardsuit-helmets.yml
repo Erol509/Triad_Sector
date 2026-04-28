@@ -177,15 +177,6 @@
       head-resomi:
       - state: on-equipped-HELMET-unshaded-resomi
         shader: unshaded
-      head-felionoid:
-      - state: on-equipped-HELMET-unshaded-felionoid
-        shader: unshaded
-      head-cyclorite:
-      - state: on-equipped-HELMET-unshaded-cyclorite
-        shader: unshaded
-      head-vulpkanin:
-      - state: on-equipped-HELMET-unshaded-vulpkanin
-        shader: unshaded
   - type: PointLight
     color: green
     radius: 6
@@ -294,9 +285,6 @@
           shader: unshaded
       head-vox:
         - state: equipped-head-light-vox
-          shader: unshaded
-      head-vulpkanin:
-        - state: equipped-head-light-vulpkanin
           shader: unshaded
       head-reptilian:
         - state: equipped-head-light-reptilian
@@ -506,6 +494,7 @@
     tags:
       - CorgiWearable
 
+/*
 - type: entity
   parent: ClothingHeadHelmetHardsuitAtmos
   id: ClothingHeadHelmetHardsuitAtmosGolden
@@ -524,3 +513,4 @@
       map: [ "light" ]
   - type: PointLight
     color: "#feffad"
+*/
