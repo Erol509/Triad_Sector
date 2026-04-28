@@ -545,47 +545,6 @@
       path: /Audio/_EinsteinEngines/Voice/IPC/pai_whistle.ogg
       params:
         variation: 0.125
-      path: /Audio/Voice/Resomi/resomi_cry.ogg
-    Cough:
-      collection: FemaleCoughs
-    Yawn:
-      collection: FemaleYawn
-    Hisses:
-      collection: FelionoidHisses
-    Purr:
-      collection: FelionoidPurrs
-    Growl:
-      collection: FelionoidGrowls
-    Trill:
-      collection: FelionoidTrills
-    Scree:
-      collection: ResomiScrees
-    Call:
-      collection: ResomiCalls
-    Squawk:
-      collection: ResomiSquawk
-
-- type: emoteSounds
-  id: UnisexSiliconXenoborg
-  params:
-    variation: 0.05
-  sounds:
-    Scream:
-      collection: XenoborgScream
-    Laugh:
-      collection: XenoborgLaugh
-    Beep:
-      collection: XenoborgBeep
-    Chime:
-      collection: XenoborgChime
-    Buzz:
-      collection: XenoborgBuzz
-    Buzz-Two:
-      collection: XenoborgBuzzTwo
-    Honk:
-      collection: XenoborgBikeHorn
-    Ping:
-      collection: XenoborgPing
 
 # body emotes
 - type: emoteSounds
