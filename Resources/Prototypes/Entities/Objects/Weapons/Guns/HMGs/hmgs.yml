@@ -5,14 +5,6 @@
   description: Spray and pray.
   abstract: true
   components:
-  - type: KnockbackByUserTag
-    doestContain:
-      Resomi:
-        knockback: 0.01
-        staminaMultiplier: 100
-      Avali:
-        knockback: 0.01 # Bigger bird, more sturdy bones.. or something.
-        staminaMultiplier: 100
   - type: Sprite
   - type: Item
     size: Ginormous
