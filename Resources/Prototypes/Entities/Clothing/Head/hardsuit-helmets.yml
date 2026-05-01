@@ -241,8 +241,7 @@
   - type: Sprite
     sprite: Clothing/Head/Hardsuits/salvage.rsi
   - type: Clothing
-    #sprite: Clothing/Head/Hardsuits/salvage.rsi
-    sprite: _Starlight/Clothing/Head/Hardsuits/salvage.rsi # 🌟Starlight begin
+    sprite: Clothing/Head/Hardsuits/salvage.rsi
     layers:
       - state: icon
       - state: icon-unshaded
