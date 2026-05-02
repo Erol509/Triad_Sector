@@ -24,12 +24,8 @@
     },
     {
       "name": "equipped-MASK-hydrakin",
-    },
-    {
-      "name": "equipped-MASK-resomi",
       "directions": 4
     },
-
     {
       "name": "inhand-left",
       "directions": 4

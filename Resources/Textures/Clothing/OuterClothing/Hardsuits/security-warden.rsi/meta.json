@@ -19,11 +19,7 @@
       "directions": 4
     },
     {
-      "name": "equipped-OUTERCLOTHING-resomi",
-      "directions": 4
-    },
-    {
-      "name": "equipped-OUTERCLOTHING-avali",
+      "name": "equipped-OUTERCLOTHING-reptilian",
       "directions": 4
     },
     {
@@ -33,6 +29,14 @@
     {
       "name": "inhand-right",
       "directions": 4
-    }
+        },
+        {
+            "name": "equipped-OUTERCLOTHING-resomi",
+            "directions": 4
+    },
+    {
+      "name": "equipped-OUTERCLOTHING-avali",
+      "directions": 4
+    },
   ]
 }

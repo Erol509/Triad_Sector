@@ -23,15 +23,7 @@
         "directions": 4
     },
     {
-        "name": "equipped-OUTERCLOTHING-dog",
-        "directions": 4
-    },
-    {
-        "name": "equipped-OUTERCLOTHING-scurret",
-        "directions": 4
-    },
-    {
-        "name": "equipped-OUTERCLOTHING-resomi",
+      "name": "equipped-OUTERCLOTHING-reptilian",
         "directions": 4
     },
     {
@@ -41,6 +33,14 @@
     {
         "name": "inhand-right",
         "directions": 4
+    },
+    {
+      "name": "equipped-OUTERCLOTHING-resomi",
+      "directions": 4
+    },
+    {
+      "name": "equipped-OUTERCLOTHING-harpy",
+      "directions": 4
     },
     {
       "name": "equipped-OUTERCLOTHING-hydrakin",
