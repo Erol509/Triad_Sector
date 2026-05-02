@@ -849,7 +849,7 @@
           damage:
             types:
               Caustic: 2 # 30 damage per unit was ridiculous, but I'm leaving some damage to punish mistakes without risking round removal. Adding salt to water shouldn't suddenly make it the strongest toxin in the game by far.
-              Heat: 2 
+              Heat: 2
         - !type:HealthChange
           conditions:
           - !type:OrganType
@@ -858,7 +858,7 @@
           damage:
             types:
               Caustic: 2 # 30 damage per unit was ridiculous, but I'm leaving some damage to punish mistakes without risking round removal. Adding salt to water shouldn't suddenly make it the strongest toxin in the game by far.
-              Heat: 2 
+              Heat: 2
 
 - type: reagent
   id: Siderlac
@@ -1325,30 +1325,10 @@
         factor: 3
     Medicine:
       effects:
-    Medicine:  # Starlight
-      effects:
-      #If vampire
-      - !type:HealthChange
-        conditions:
-        - !type:OrganType
-          type: Vampire
-        damage:
-          types:
-            Heat: 2
-      - !type:Emote
-        conditions:
-        - !type:OrganType
-          type: Vampire
-        emote: Scream
-        probability: 0.3
-      #If not vampire
       - !type:HealthChange
         conditions:
         - !type:TotalDamage
           max: 50
-        - !type:OrganType
-          type: Vampire
-          shouldHave: false
         damage:
           types:
             Blunt: -0.2
@@ -1358,15 +1338,6 @@
             Cold: -0.2
 
   reactiveEffects:
-    Unholy: # Starlight
-      methods: [ Touch ]
-      effects:
-        - !type:HealthChange
-          damage:
-            types:
-              Heat: 5
-        - !type:Emote
-          emote: Scream
     Extinguish:
       methods: [ Touch ]
       effects:
