@@ -88,11 +88,6 @@
   name: eyes
   suffix: Avali
   description: "The eyes of an Avali."
-  components:
-  - type: OrganVisualization
-    layer: Eyes
-    prototypes:
-      Default: MobAvaliEyes
 
 - type: entity
   id: OrganAvaliBrain

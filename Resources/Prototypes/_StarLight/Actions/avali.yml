@@ -1,22 +1,26 @@
 # Actions for Avali species
+# Tip: 50% opacity light orange was applied after the icons were made, take the colors off the light orange in the base sprite.
 
 - type: entity
-  id: ActionAvaliStasisEnter
+  id: ActionStasisEnter
   name: avali-stasis-action-enter-name
   description: avali-stasis-action-enter-description
   components:
-  - type: InstantAction
-    icon: /Textures/Interface/Actions/eyeclose.png
-    event: !type:AvaliEnterStasisActionEvent
-    useDelay: 1
+    - type: InstantAction
+      itemIconStyle: BigAction
+      icon:
+        sprite: _Starlight/Interface/Actions/actions_avali.rsi
+        state: heal
+      event: !type:PrepareStasisActionEvent
 
 - type: entity
-  id: ActionAvaliStasisExit
+  id: ActionStasisExit
   name: avali-stasis-action-exit-name
   description: avali-stasis-action-exit-description
   components:
-  - type: InstantAction
-    icon: /Textures/Interface/Actions/eyeopen.png
-    event: !type:AvaliExitStasisActionEvent
-    useDelay: 1
-
+    - type: InstantAction
+      itemIconStyle: BigAction
+      icon:
+        sprite: _Starlight/Interface/Actions/actions_avali.rsi
+        state: healoff
+      event: !type:ExitStasisActionEvent

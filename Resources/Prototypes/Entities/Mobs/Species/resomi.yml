@@ -12,10 +12,6 @@
     understands:
     - GalacticCommon
     - Scratch
-  # Starlight-end
-  - type: Absorbable
-  - type: Jump
-    action: JumpResomi
   - type: DamageVisuals
     thresholds: [ 10, 30, 50, 70]
     targetLayers:
@@ -249,8 +245,6 @@
     - AnomalyHost
     - Resomi
   - type: NightVision
-  - type: FlashModifier
-    modifier: 2
 
 - type: entity
   parent: BaseSpeciesDummy
