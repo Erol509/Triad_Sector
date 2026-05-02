@@ -6,10 +6,6 @@
   "size": {
     "x": 32,
     "y": 32
-  },
-  "states": [
-    {
-      "name": "icon"
     },
     "states": [
         {
@@ -49,27 +45,15 @@
             "directions": 4
         },
         {
-            "name": "equipped-head-dog",
+            "name": "equipped-head-hydrakin",
             "directions": 4
         },
         {
-            "name": "equipped-head-light-dog",
+            "name": "equipped-head-light-hydrakin",
             "directions": 4
         },
         {
-            "name": "equipped-head-unshaded-dog",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-resomi",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-light-resomi",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-unshaded-resomi",
+            "name": "equipped-head-unshaded-hydrakin",
             "directions": 4
         },
         {

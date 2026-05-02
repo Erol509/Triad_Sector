@@ -29,8 +29,6 @@
     RArm: MobResomiRArm
     LHand: MobResomiLHand
     RHand: MobResomiRHand
-    UndergarmentTop: MobHumanoidAnyMarking
-    UndergarmentBottom: MobHumanoidAnyMarking
     LLeg: MobResomiLLeg
     RLeg: MobResomiRLeg
     LFoot: MobResomiLFoot
@@ -43,9 +41,6 @@
   id: MobResomiMarkingLimits
   onlyWhitelisted: true
   points:
-    Special:
-      points: 10
-      required: false
     Hair:
       points: 1
       required: false
