@@ -302,9 +302,6 @@
         - !type:OrganType #starliight
           type: Avali
           shouldHave: false
-        - !type:OrganType
-          type: Resomi
-          shouldHave: false
         damage:
           types:
             Asphyxiation: -1
@@ -330,16 +327,6 @@
             Poison: 1.5 #Avali blood is ammonia based, so chems made to treat normal bloodloss poison them instead (Lethal Dose: 20u)
             Asphyxiation: 1
             Bloodloss: 1
-      - !type:HealthChange #Starlight
-        conditions:
-        - !type:OrganType
-          type: Resomi
-          shouldHave: true
-        damage:
-          types:
-            Poison: 1.5 #Resomi blood is ammonia based, so chems made to treat normal bloodloss poison them instead (Lethal Dose: 20u)
-            Asphyxiation: 1
-            Bloodloss: 1
 
 - type: reagent
   id: DexalinPlus
@@ -356,9 +343,6 @@
         conditions:
         - !type:OrganType #starliight
           type: Avali
-          shouldHave: false
-        - !type:OrganType
-          type: Resomi
           shouldHave: false
         damage:
           types:
@@ -390,16 +374,6 @@
         damage:
           types:
             Poison: 2.5 #Avali blood is ammonia based, so chems made to treat normal bloodloss poison them instead. Dex+ is worse. (Lethal Dose: 15u)
-            Asphyxiation: 1.5
-            Bloodloss: 1
-      - !type:HealthChange #Starlight
-        conditions:
-        - !type:OrganType
-          type: Resomi
-          shouldHave: true
-        damage:
-          types:
-            Poison: 2.5 #Resomi blood is ammonia based, so chems made to treat normal bloodloss poison them instead. Dex+ is worse. (Lethal Dose: 15u)
             Asphyxiation: 1.5
             Bloodloss: 1
 
@@ -837,23 +811,11 @@
           - !type:OrganType
            type: Avali
            shouldHave: false
-          - !type:OrganType
-           type: Resomi
-           shouldHave: false
           amount: 6
         - !type:HealthChange
           conditions:
           - !type:OrganType
            type: Avali
-           shouldHave: true
-          damage:
-            types:
-              Caustic: 2 # 30 damage per unit was ridiculous, but I'm leaving some damage to punish mistakes without risking round removal. Adding salt to water shouldn't suddenly make it the strongest toxin in the game by far.
-              Heat: 2
-        - !type:HealthChange
-          conditions:
-          - !type:OrganType
-           type: Resomi
            shouldHave: true
           damage:
             types:
