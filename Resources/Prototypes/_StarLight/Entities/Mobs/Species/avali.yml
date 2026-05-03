@@ -165,9 +165,9 @@
       shiveringHeatRegulation: 2000
       normalBodyTemperature: 261
       thermalRegulationTemperatureThreshold: 1
-    - type: Stasis
-      enterStasisAction: ActionStasisEnter
-      exitStasisAction: ActionStasisExit
+#    - type: Stasis
+#      enterStasisAction: ActionStasisEnter
+#      exitStasisAction: ActionStasisExit
     - type: Carriable  # Hardlight change they can be carry now
 # Chirp!
 
