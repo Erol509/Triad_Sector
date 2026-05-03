@@ -1,3 +1,4 @@
+<!-- Not workingfor now, need undergarmament ported
 # Top Undergarments
 - type: marking
   id: UndergarmentTopBinderAvali
@@ -130,3 +131,4 @@
   sprites:
   - sprite: _Starlight/Mobs/Customization/undergarments.rsi
     state: thong_resomi
+-->

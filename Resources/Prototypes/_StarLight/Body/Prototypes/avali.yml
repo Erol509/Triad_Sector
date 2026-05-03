@@ -11,8 +11,8 @@
         brain: OrganAvaliBrain
         eyes: OrganAvaliEyes
         tongue: OrganHumanTongue
-        eye_implant: null
-        brain_implant: BrainImplantNexus
+        #eye_implant: null
+        #brain_implant: BrainImplantNexus
     torso:
       part: TorsoAvali
       connections:
