@@ -6,22 +6,27 @@
   sprites: MobAvaliSprites
   defaultSkinTone: "#D2B48C"
   markingLimits: MobAvaliMarkingLimits
-  dollPrototype: MobAvaliDummy
+  dollPrototype: AppearanceAvali
   skinColoration: Hues
   maleFirstNames: names_avali_first
   femaleFirstNames: names_avali_first
   lastNames: names_avali_packs
   naming: FirstLast
-  minAge: 23
-  youngAge: 103
-  oldAge: 257
-  maxAge: 430
+  minAge: 20
+  youngAge: 100
+  oldAge: 250
+  maxAge: 350
+  minHeight: 0.8
+  defaultHeight: 0.91
+  maxHeight: 1
+  standardSize: 150 # gives a range of 130-150cm and 27-31kg
+  standardWeight: 31
+  standardDensity: 11
+  customName: true # Starlight
 
 - type: speciesBaseSprites
   id: MobAvaliSprites
   sprites:
-    #TailBehind: MobHumanoidAnyMarking
-    #TailOversuit: MobHumanoidAnyMarking
     Head: MobAvaliHead
     #UndergarmentTop: MobHumanoidAnyMarking
     #UndergarmentBottom: MobHumanoidAnyMarking
@@ -55,12 +60,6 @@
     FacialHair:
       points: 0
       required: false
-    #UndergarmentTop:
-    #  points: 1
-    #  required: false
-    #UndergarmentBottom:
-    #  points: 1
-    #  required: false
     Tail:
       points: 1
       required: true
@@ -76,13 +75,19 @@
       required: true
       defaultMarkings: [ AvaliEarsBase ]
     Chest:
-      points: 6
+      points: 1
       required: false
     Legs:
-      points: 6
+      points: 2
       required: false
+#    UndergarmentTop:
+#      points: 1
+#      required: false
+#    UndergarmentBottom:
+#      points: 1
+#      required: false
     Arms:
-      points: 6
+      points: 4
       required: false
 
 - type: humanoidBaseSprite
@@ -168,12 +173,3 @@
   baseSprite:
     sprite: _Starlight/Mobs/Species/Avali/parts.rsi
     state: r_foot
-
-- type: entity
-  id: Stasis
-  name: Avali Stasis
-  description: Allows Avali to enter nanite induced stasis.
-  components:
-    - type: Stasis
-      enterStasisAction: ActionStasisEnter
-      exitStasisAction: ActionStasisExit
