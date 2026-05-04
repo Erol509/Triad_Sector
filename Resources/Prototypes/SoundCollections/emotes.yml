@@ -5,7 +5,7 @@
     - /Audio/Voice/Human/manlaugh2.ogg
 
 - type: soundCollection
-  id: ResomiLaugh
+  id: ResomiLaughOld
   files:
     - /Audio/Voice/Resomi/resomi_laugh1.ogg
     - /Audio/Voice/Resomi/resomi_laugh2.ogg
