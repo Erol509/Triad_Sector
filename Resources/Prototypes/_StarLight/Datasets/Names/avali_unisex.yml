@@ -1,11 +1,41 @@
-- type: localizedDataset
+- type: dataset
   id: names_avali_first
   values:
-    prefix: names-avali-first-dataset-
-    count: 20
+  - Ko
+  - Nomi
+  - Jasyo
+  - Nesuli
+  - Eikii
+  - Runo
+  - Khauni
+  - Eilun
+  - Rhaun
+  - Halan
+  - Nahami
+  - Halyu
+  - Kala
+  - Renala
+  - Eitun
+  - Nesomi
+  - Ralomi
+  - Kazo
+  - Jasuni
+  - Ruko
 
-- type: localizedDataset
+- type: dataset
   id: names_avali_packs
   values:
-    prefix: names-avali-packs-dataset-
-    count: 14
+  - Aviator Pack
+  - Screenpeckers Pack
+  - Hullguard Pack
+  - Irontalon Pack
+  - Hatchguard Pack
+  - Sprinter Pack
+  - Plasmatalon Pack
+  - Ironclaw Pack
+  - Steelnest Pack
+  - Silverfeather Pack
+  - Mineclaw Pack
+  - Hunter Pack
+  - Darkfeathers Pack
+  - Maintsnest Pack
