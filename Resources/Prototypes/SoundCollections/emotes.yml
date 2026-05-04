@@ -12,7 +12,7 @@
     - /Audio/Voice/Resomi/resomi_laugh3.ogg
 
 - type: soundCollection
-  id: ResomiChirp
+  id: ResomiChirpOld
   files:
     - /Audio/Voice/Resomi/resomi_chirp1.ogg
     - /Audio/Voice/Resomi/resomi_chirp2.ogg
