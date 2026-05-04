@@ -1,72 +1,72 @@
 {
-    "version": 1,
-    "license": "CC-BY-SA-3.0",
-    "copyright": "Original by Emisse, modified by EmoGarbage404. Vox states by Flareguy for SS14. Dog states modified from base states by Sparlight (GitHub). Avali state by DocMoth (Github). Resomi state created by Huaqas (Github).",
+  "version": 1,
+  "license": "CC-BY-SA-3.0",
+  "copyright": "Original by Emisse, modified by EmoGarbage404. Vox states by Flareguy for SS14. Dog states modified from base states by Sparlight (GitHub). Avali state by DocMoth (Github). Resomi state created by Huaqas (Github).",
 
   "size": {
     "x": 32,
     "y": 32
+  },
+  "states": [
+    {
+      "name": "icon"
     },
-    "states": [
-        {
-            "name": "icon"
-        },
-        {
-            "name": "icon-unshaded"
-        },
-        {
-            "name": "icon-flash"
-        },
-        {
-            "name": "light-overlay"
-        },
-        {
-            "name": "equipped-head",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-light",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-unshaded",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-vox",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-light-vox",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-unshaded-vox",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-hydrakin",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-light-hydrakin",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-unshaded-hydrakin",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-avali",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-light-avali",
-            "directions": 4
-        },
-        {
-            "name": "equipped-head-unshaded-avali",
-            "directions": 4
-        }
+    {
+      "name": "icon-unshaded"
+    },
+    {
+      "name": "icon-flash"
+    },
+    {
+      "name": "light-overlay"
+    },
+    {
+      "name": "equipped-head",
+      "directions": 4
+    },
+    {
+      "name": "equipped-head-light",
+      "directions": 4
+    },
+    {
+      "name": "equipped-head-unshaded",
+      "directions": 4
+    },
+    {
+      "name": "equipped-head-vox",
+      "directions": 4
+    },
+    {
+      "name": "equipped-head-light-vox",
+      "directions": 4
+    },
+    {
+      "name": "equipped-head-unshaded-vox",
+      "directions": 4
+    },
+	{
+      "name": "equipped-head-hydrakin",
+      "directions": 4
+    },
+    {
+      "name": "equipped-head-light-hydrakin",
+      "directions": 4
+    },
+    {
+      "name": "equipped-head-unshaded-hydrakin",
+      "directions": 4
+    },
+    {
+      "name": "equipped-head-avali",
+      "directions": 4
+    },
+    {
+      "name": "equipped-head-light-avali",
+      "directions": 4
+    },
+    {
+      "name": "equipped-head-unshaded-avali",
+      "directions": 4
+    }
     ]
 }
