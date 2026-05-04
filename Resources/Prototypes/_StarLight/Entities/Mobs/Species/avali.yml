@@ -129,7 +129,7 @@
         - !type:SpawnEntitiesBehavior
           spawnInContainer: true
           spawn:
-            FoodMeatChickenFriedMystery:
+            FoodMeatChickenFried:
               min: 2
               max: 5
         - !type:BurnBodyBehavior { }
