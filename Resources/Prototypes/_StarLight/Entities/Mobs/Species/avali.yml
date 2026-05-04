@@ -132,8 +132,7 @@
             FoodMeatChickenFriedMystery:
               min: 2
               max: 5
-        - !type:BurnBodyBehavior # HardLight: Parity with upstream changes to Vox.
-          popupMessage: bodyburn-vox-text-others
+        - !type:BurnBodyBehavior { }
         - !type:PlaySoundBehavior
           sound:
             collection: MeatLaserImpact
