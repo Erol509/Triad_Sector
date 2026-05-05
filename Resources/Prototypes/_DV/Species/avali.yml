@@ -16,13 +16,7 @@
   youngAge: 100
   oldAge: 250
   maxAge: 350
-  #minHeight: 0.8 TODO TRIAD
-  #defaultHeight: 0.91 TODO TRIAD
-  #maxHeight: 1 TODO TRIAD
-  #standardSize: 150 TODO TRIAD # gives a range of 130-150cm and 27-31kg
-  #standardWeight: 31 TODO TRIAD
-  #standardDensity: 11 TODO TRIAD
-  #customName: true # Starlight TODO TRIAD
+  density: 120 # same as Resomi
 
 - type: speciesBaseSprites
   id: MobAvaliSprites
