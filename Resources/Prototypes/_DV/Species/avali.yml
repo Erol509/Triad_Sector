@@ -16,7 +16,6 @@
   youngAge: 100
   oldAge: 250
   maxAge: 350
-  density: 120 # same as Resomi
 
 - type: speciesBaseSprites
   id: MobAvaliSprites
